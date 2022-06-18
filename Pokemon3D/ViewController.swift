@@ -35,7 +35,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             configuration.trackingImages = imageToTrack
             
-            configuration.maximumNumberOfTrackedImages = 1 
+            configuration.maximumNumberOfTrackedImages = 1
+            
+            print("Images Successfully Added")
         }
         
         
