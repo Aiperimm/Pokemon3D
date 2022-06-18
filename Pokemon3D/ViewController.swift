@@ -63,6 +63,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
             
+            let planeNode = SCNNode(geometry: plane)
+            
+            planeNode.eulerAngles.x = -.pi / 2 
+            
+            
+            node.addChildNode(planeNode)
+            
             
         }
         
