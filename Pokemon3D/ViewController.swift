@@ -22,6 +22,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
+        sceneView.automaticallyUpdatesLighting = true
+        
        
     }
     
@@ -74,7 +76,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             if let pokeScene = SCNScene(named: "art.scnassests/eeve.scn"){
                 
-                let pokeNode = pokeScene.rootNode.childNodes.first
+                if let pokeNode = pokeScene.rootNode.childNodes.first {
+                    
+                    planeNode.addChildNode(pokeNode)
+                    
+                }
                 
             }
             
