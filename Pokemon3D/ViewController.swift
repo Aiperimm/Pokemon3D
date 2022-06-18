@@ -32,6 +32,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARImageTrackingConfiguration()
         
         let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "Pokemon Cards", bundle: Bundle.main)
+        
+        configuration.trackingImages
 
         // Run the view's session
         sceneView.session.run(configuration)
